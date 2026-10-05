@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TryOn AI</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="../icons/icon32.png" alt="" width="24" height="24" />
+      <span>TryOn AI</span>
+    </div>
+    <div class="topbar-right">
+      <select id="profileSwitcher" class="profile-switcher" title="Active profile" aria-label="Active profile"></select>
+      <span id="connDot" class="conn-dot" title="Checking server..."></span>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-view="tryon" role="tab">Try On</button>
+    <button class="tab" data-view="profile" role="tab">Profile</button>
+    <button class="tab" data-view="wardrobe" role="tab">Wardrobe</button>
+    <button class="tab" data-view="settings" role="tab">Settings</button>
+  </nav>
+
+  <main>
+    <section id="view-tryon" class="view active"></section>
+    <section id="view-profile" class="view"></section>
+    <section id="view-wardrobe" class="view"></section>
+    <section id="view-settings" class="view"></section>
+  </main>
+
+  <div id="actionBar" class="action-bar hidden"></div>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true"></div>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <input type="file" id="fileInput" accept="image/*" hidden />
+
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>

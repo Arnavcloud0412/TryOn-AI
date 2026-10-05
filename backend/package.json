@@ -1,0 +1,27 @@
+{
+  "name": "tryon-ai-backend",
+  "version": "1.0.0",
+  "description": "Backend for the TryOn AI Chrome extension: profile storage, product image retrieval, AI virtual try-on jobs.",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "icons": "node scripts/make-icons.js",
+    "smoke": "node scripts/smoke-test.js"
+  },
+  "dependencies": {
+    "@gradio/client": "^2.7.1",
+    "@neondatabase/serverless": "^1.2.0",
+    "@vercel/blob": "^2.8.0",
+    "@vercel/functions": "^3.9.11",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "multer": "^2.4.0",
+    "sharp": "^0.35.5"
+  }
+}
